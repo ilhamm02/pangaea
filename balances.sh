@@ -14,6 +14,7 @@ done
 
 echo -e "${GREEN} Please wait..."
 
+rm -rf balances.sh
 {
         echo '#!/bin/bash'
         echo ''
@@ -21,5 +22,6 @@ echo -e "${GREEN} Please wait..."
         echo 'cd '$one_directory''
         echo './hmy --node="https://api.s0.p.hmny.io" balances '$one_address''
 } >balances.sh
+chmod a+x balances.sh
 
-echo -e "${GREEN} Successed. Please run ./balances"
+echo -e "${GREEN} Successed. Please run ./balances to check your balances."
